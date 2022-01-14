@@ -1,0 +1,266 @@
+//********************  imports
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+// ***********************variables
+$simple-text:'Roboto', sans-serif;
+$big-text:'Nerko One', cursive;
+$rainbow:linear-gradient(90deg, #0f2188 , #218108 , #d3d011 , #bb4415 , #6e061d ,);
+//********************* ground css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: auto;
+  display: block;
+  font-family: $big-text;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-family: $big-text;
+  letter-spacing: 5px;
+  font-size: 20px;
+  padding-left: 50px;
+  text-transform: uppercase;
+}
+
+p {
+  letter-spacing: 2px;
+  font-family: $simple-text;
+  padding-left: 50px;
+}
+
+section {
+  height: 100vh;
+  padding-top: 15vh;
+}
+// ****************menu
+#menu {
+  background-color: #150a2e;
+  width: 100vw;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.list {
+  text-align: center;
+  text-justify: center;
+    &__item {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 2px 20px;
+    padding: 5px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 4px 1px rgb(16, 16, 77);
+    box-shadow: 0px 0px 4px 1px rgb(10, 10, 71);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+      a {
+      color: blue;
+      text-decoration: none;
+      display: block;
+      font-family:$big-text;
+  }
+}
+  &__item::before {
+  content: "";
+  background-color: rgb(19, 19, 107);
+  position: absolute;
+  border-top: 1px solid rgb(19, 19, 121);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(2em) rotateX(40deg) scale(1 , 0.35);
+  filter: blur(1.3em);
+  }
+  &__item:hover::before{
+    border-top: 1px solid whitesmoke;
+    filter: blur(0.7em);
+    box-shadow: 0 2px 0 0 blue;
+  }
+
+
+  &__item:hover,
+  &__item:focus {
+    background-color: blue;
+    border: 2px solid whitesmoke;
+    -webkit-box-shadow: 2px 1px 20px 5px blue;
+    box-shadow: 2px 1px 20px 5px blue;
+  }
+
+  &__item:hover a {
+    color: whitesmoke;
+  }
+
+}
+
+
+// *********************start
+.main {
+  background-image: url(/img/zespół.jpg);
+  background-size: cover;
+  color: whitesmoke;
+  
+  .text{
+    margin: auto;
+    padding: 0 20px;
+    width: 80%;
+    // background: rgba( 231, 24, 181, 0.15 );
+    background: url("../img/kółka.jpg");
+    background-size: cover;
+    opacity: 0.8;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5px );
+border-radius: 20px;
+
+  }
+  &__titel {
+  width: 20vw;
+  margin-top: 40vh;
+  padding: 5px;
+  
+}
+&__undertitel {
+  width: 20vw;
+  margin: auto;
+  padding: 5px;
+ 
+}
+&__text {
+  padding: 5px;
+  margin: auto;
+ 
+}
+
+}
+
+
+
+// **********************about
+.about {
+  width: 100vw;
+  background: #101147;
+  background: $rainbow;
+  background-size: 300%;
+  background-position:left;
+  color: #c2c5c7;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  transition: background-position 2s;
+  &:hover{
+    background-position: right;
+  }
+  &__team{
+    width: 80vw;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    background: #000;
+
+  }
+  
+
+  }
+
+//********************* gallery
+.gallery{
+  background: url("../img/kółka.jpg");
+  background-size: cover;
+  color: rgb(244, 255, 86);
+  h2{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+}
+//********************** demo video
+.demo {
+  background: url("../img/kółka\ i\ tr.jpg");
+  background-size: cover;
+  display: block;
+  align-items: center;
+  color: aliceblue;
+  h2{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 0px 20px;
+  }
+  .music_list{
+    display: flex;
+    width: 80vw;
+    padding: 50px;
+  }
+  .music_item {
+    display: block;
+    width: 100%;
+    padding: 20px;
+}
+
+.music_item p {
+    // background: rgba(0, 0, 0, .5);
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    
+}
+
+
+
+
+.music_item audio {
+    width: 100%;
+    // background: rgba(0, 0, 0, .5);
+    color: #FFF;
+}
+
+}
+  
+
+//****************** contact
+
+.contact{
+  background: url(https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-size: contain;
+  color: #c2c5c7;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+
+  &__text{
+    width: 50vw;
+    height: 100%;
+    padding-top: 20vh;
+    display: inline-block;
+    background: rgba( 95, 11, 86, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 9.5px );
+
+
+  }
+  &__img{
+    position: relative;
+    width: 50vw;
+    height: 100%;
+    background: $rainbow;
+    display: inline-block;
+
+  }
+}
