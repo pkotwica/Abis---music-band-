@@ -1,9 +1,11 @@
 //********************  imports
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 // ***********************variables
 $simple-text:'Roboto', sans-serif;
+$hand-text:'Caveat', cursive;
 $big-text:'Nerko One', cursive;
 $rainbow:linear-gradient(90deg, #0f2188 , #218108 , #d3d011 , #bb4415 , #6e061d ,);
 //********************* ground css
@@ -15,7 +17,7 @@ $rainbow:linear-gradient(90deg, #0f2188 , #218108 , #d3d011 , #bb4415 , #6e061d 
   box-sizing: border-box;
 }
 body{
-  background: url("../img/kółka\ i\ tr.jpg");
+  background: url("../img/bg_bggenerator_com\ \(1\).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -56,6 +58,7 @@ section {
   z-index: 10;
 }
 .list {
+  
   text-align: center;
   text-justify: center;
     &__item {
@@ -63,7 +66,7 @@ section {
     display: inline-block;
     font-size: 22px;
     text-transform: uppercase;
-    margin: 2px 20px;
+    margin: 20px;
     padding: 5px;
     border: 2px solid blue;
     border-radius: 5px;
@@ -157,25 +160,89 @@ border-radius: 20px;
 // **********************about
 .about {
   width: 100vw;
-  // background: #101147;
-  // background: $rainbow;
-  background-size: 300%;
-  background-position:left;
   color: #c2c5c7;
   text-align: center;
   justify-items: center;
   align-items: center;
-  transition: background-position 2s;
-  &:hover{
-    background-position: right;
-  }
+ 
+  
   &__team{
     width: 80vw;
     height: 400px;
     margin: auto;
-    display: flex;
-    background: #000;
+    display: grid;
+    // background: #000;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
 
+  }
+  &__person{
+    
+    height: 100%;
+    background-size:cover ;
+    background-position:center ;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+    &:hover{
+      transform: scale(1.2);
+      z-index:100;
+    }
+
+    &:hover p, &:hover h3 {
+      width: 100%;
+    }
+    p{
+      text-transform: uppercase;
+      margin-top: 350px;
+      
+    }
+    p, h3{
+      display: flex;
+      width: 0px;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      color: white;
+      overflow: hidden;
+      font-family: $hand-text;
+      font-size: 30px;
+      background: url("../img/bg_bggenerator_com\ \(1\).jpg");
+      background-size: cover;
+      transition: all 0.3s ease-in-out;
+    }
+
+  }
+  &__person:nth-child(1){
+    background: url("../img/gitarzysta.jpg");
+    background-size:cover ;
+    background-position:center ;
+    background-repeat: no-repeat;
+  }
+  &__person:nth-child(2){
+    background: url("../img/klawiszowiec.jpg");
+    background-size:cover ;
+    background-position:center ;
+    background-repeat: no-repeat;
+  }
+  &__person:nth-child(3){
+    background: url("../img/wokalistka.jpg");
+    background-size:cover ;
+    background-position-x:-450px ;
+    background-repeat: no-repeat;
+  }
+  &__person:nth-child(4){
+    background: url("../img/perkusista.jpg");
+    background-size:cover ;
+    background-position:left ;
+    background-repeat: no-repeat;
+  }
+  &__person:nth-child(5){
+    background: url("../img/bassista.jpg");
+    background-size:cover ;
+    background-position:center ;
+    background-repeat: no-repeat;
   }
   
 
@@ -206,14 +273,16 @@ border-radius: 20px;
     padding: 0px 20px;
   }
   .music_list{
-    display: flex;
-    width: 80vw;
-    padding: 50px;
+    display: grid;
+    grid-column: 1fr;
+    width: 50vw;
+    align-items: center;
+    margin: auto;
   }
   .music_item {
     display: block;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .music_item p {
@@ -253,7 +322,7 @@ border-radius: 20px;
     width: 50vw;
     height: 100%;
     padding-top: 20vh;
-    ba
+    padding: 50px;
     display: inline-block;
     background: rgba( 95, 11, 86, 0.35 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );

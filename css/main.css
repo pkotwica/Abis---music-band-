@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
 }
 
 body {
-  background: url("../img/kółka i tr.jpg");
+  background: url("../img/bg_bggenerator_com (1).jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -61,7 +62,7 @@ section {
   display: inline-block;
   font-size: 22px;
   text-transform: uppercase;
-  margin: 2px 20px;
+  margin: 20px;
   padding: 5px;
   border: 2px solid blue;
   border-radius: 5px;
@@ -151,30 +152,104 @@ section {
 
 .about {
   width: 100vw;
-  background-size: 300%;
-  background-position: left;
   color: #c2c5c7;
   text-align: center;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: background-position 2s;
-  transition: background-position 2s;
-}
-
-.about:hover {
-  background-position: right;
 }
 
 .about__team {
   width: 80vw;
   height: 400px;
   margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+.about__person {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.about__person:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 100;
+}
+
+.about__person:hover p, .about__person:hover h3 {
+  width: 100%;
+}
+
+.about__person p {
+  text-transform: uppercase;
+  margin-top: 350px;
+}
+
+.about__person p, .about__person h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #000;
+  width: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  color: white;
+  overflow: hidden;
+  font-family: "Caveat", cursive;
+  font-size: 30px;
+  background: url("../img/bg_bggenerator_com (1).jpg");
+  background-size: cover;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.about__person:nth-child(1) {
+  background: url("../img/gitarzysta.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about__person:nth-child(2) {
+  background: url("../img/klawiszowiec.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about__person:nth-child(3) {
+  background: url("../img/wokalistka.jpg");
+  background-size: cover;
+  background-position-x: -450px;
+  background-repeat: no-repeat;
+}
+
+.about__person:nth-child(4) {
+  background: url("../img/perkusista.jpg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.about__person:nth-child(5) {
+  background: url("../img/bassista.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gallery {
@@ -205,17 +280,21 @@ section {
 }
 
 .demo .music_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 80vw;
-  padding: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  grid-column: 1fr;
+  width: 50vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
 }
 
 .demo .music_item {
   display: block;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .demo .music_item p {
@@ -246,6 +325,7 @@ section {
   width: 50vw;
   height: 100%;
   padding-top: 20vh;
+  padding: 50px;
   display: inline-block;
   background: rgba(95, 11, 86, 0.35);
   -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
