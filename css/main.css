@@ -8,6 +8,12 @@
           box-sizing: border-box;
 }
 
+body {
+  background: url("../img/kółka i tr.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h1 {
   margin: auto;
   display: block;
@@ -145,9 +151,6 @@ section {
 
 .about {
   width: 100vw;
-  background: #101147;
-  background: -webkit-gradient(linear, left top, right top, from(#0f2188), color-stop(#218108), color-stop(#d3d011), color-stop(#bb4415), to(#6e061d));
-  background: linear-gradient(90deg, #0f2188, #218108, #d3d011, #bb4415, #6e061d);
   background-size: 300%;
   background-position: left;
   color: #c2c5c7;
@@ -175,7 +178,6 @@ section {
 }
 
 .gallery {
-  background: url("../img/kółka.jpg");
   background-size: cover;
   color: #f4ff56;
 }
@@ -187,7 +189,6 @@ section {
 }
 
 .demo {
-  background: url("../img/kółka i tr.jpg");
   background-size: cover;
   display: block;
   -webkit-box-align: center;
@@ -257,8 +258,6 @@ section {
   position: relative;
   width: 50vw;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#0f2188), color-stop(#218108), color-stop(#d3d011), color-stop(#bb4415), to(#6e061d));
-  background: linear-gradient(90deg, #0f2188, #218108, #d3d011, #bb4415, #6e061d);
   display: inline-block;
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,11 +9,16 @@ $rainbow:linear-gradient(90deg, #0f2188 , #218108 , #d3d011 , #bb4415 , #6e061d 
 //********************* ground css
 
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background: url("../img/kółka\ i\ tr.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 h1 {
   margin: auto;
   display: block;
@@ -152,8 +157,8 @@ border-radius: 20px;
 // **********************about
 .about {
   width: 100vw;
-  background: #101147;
-  background: $rainbow;
+  // background: #101147;
+  // background: $rainbow;
   background-size: 300%;
   background-position:left;
   color: #c2c5c7;
@@ -178,7 +183,7 @@ border-radius: 20px;
 
 //********************* gallery
 .gallery{
-  background: url("../img/kółka.jpg");
+  // background: url("../img/kółka.jpg");
   background-size: cover;
   color: rgb(244, 255, 86);
   h2{
@@ -189,7 +194,7 @@ border-radius: 20px;
 }
 //********************** demo video
 .demo {
-  background: url("../img/kółka\ i\ tr.jpg");
+  // background: url("../img/kółka\ i\ tr.jpg");
   background-size: cover;
   display: block;
   align-items: center;
@@ -248,6 +253,7 @@ border-radius: 20px;
     width: 50vw;
     height: 100%;
     padding-top: 20vh;
+    ba
     display: inline-block;
     background: rgba( 95, 11, 86, 0.35 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -259,7 +265,7 @@ backdrop-filter: blur( 9.5px );
     position: relative;
     width: 50vw;
     height: 100%;
-    background: $rainbow;
+    // background: $rainbow;
     display: inline-block;
 
   }
