@@ -311,7 +311,7 @@ border-radius: 20px;
 
 .contact{
   background: url(https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-  background-size: contain;
+  background-size: cover;
   color: #c2c5c7;
   display: flex;
   margin: 0;
@@ -338,4 +338,62 @@ backdrop-filter: blur( 9.5px );
     display: inline-block;
 
   }
+}
+@media (max-width:420px) {
+  #menu{
+    height: 10vh;
+   
+  }
+  .list__item{
+    margin:15px 5px;
+    padding: 2px;
+   }
+   .about{
+     &__team{
+    width: 90vw;
+    height: 80vh;
+    display: flexbox;
+    position: relative;
+   }
+    &__person{
+     display:flex;
+     height: 40vh;
+     width: 45vw;
+     position: relative;
+     margin: 0;
+     padding: 0;
+     gap: 0;
+      
+    }
+    &__person:nth-child(1){
+      top: 0;
+      left: 0;
+    }
+    &__person:nth-child(2){
+      top: 0;
+      right: 0;
+    }
+    &__person:nth-child(3){
+      top: 25%;
+      left: -150%;
+      background-position-x:-350px ;
+      z-index: 3;
+      
+    }
+    &__person:nth-child(4){
+     
+      top:50%;
+      left: -300%;
+    }
+    &__person:nth-child(5){
+      top: 50%;
+      left: -300%;
+    }
+  }
+  .demo{
+    .music_list{
+    width: 80vw;
+  }
+  }
+  
 }
