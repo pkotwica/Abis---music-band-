@@ -45,7 +45,7 @@ p {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 15vh;
 }
 // ****************menu
@@ -321,6 +321,7 @@ border-radius: 20px;
   &__text{
     width: 50vw;
     height: 100%;
+    margin-top: 50vh;
     padding-top: 20vh;
     padding: 50px;
     display: inline-block;
@@ -330,16 +331,21 @@ backdrop-filter: blur( 9.5px );
 
 
   }
-  &__img{
-    position: relative;
-    width: 50vw;
-    height: 100%;
-    // background: $rainbow;
-    display: inline-block;
-
-  }
+ 
+}
+footer{
+  height: 10vh;
+  background: #000;
+  text-align: center;
+  margin: auto;
+  color: white;
+  padding: 20px;
 }
 @media (max-width:420px) {
+
+  h1{
+    font-size: 30px;
+  }
   #menu{
     height: 10vh;
    
@@ -347,6 +353,12 @@ backdrop-filter: blur( 9.5px );
   .list__item{
     margin:15px 5px;
     padding: 2px;
+    font-size: 15px;
+   }
+   .main{
+     .text{
+       width: 100%;
+     }
    }
    .about{
      &__team{
@@ -394,6 +406,16 @@ backdrop-filter: blur( 9.5px );
     .music_list{
     width: 80vw;
   }
+  }
+  .contact{
+    &__text{
+      width: 100vw;
+      padding: 10px;
+      min-height: 40vh;
+      p{
+        margin-top: 25px;
+      }
+    }
   }
   
 }
