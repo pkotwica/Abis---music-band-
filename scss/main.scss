@@ -1,26 +1,28 @@
 //********************  imports
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 // ***********************variables
-$simple-text:'Roboto', sans-serif;
-$hand-text:'Caveat', cursive;
-$big-text:'Nerko One', cursive;
-$rainbow:linear-gradient(90deg, #0f2188 , #218108 , #d3d011 , #bb4415 , #6e061d ,);
+$simple-text: 'Ibarra Real Nova', serif;
+$hand-text: 'Cinzel', serif;
+$big-text: 'Play', sans-serif;
+// $rainbow: linear-gradient(90deg, #0f2188, #218108, #d3d011, #bb4415, #6e061d, );
 //********************* ground css
 
 * {
-  
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  background: url("../img/bg_bggenerator_com\ \(1\).jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+
+body {
+  background: rgb(233, 229, 229);
 }
+
 h1 {
   margin: auto;
   display: block;
@@ -48,65 +50,71 @@ section {
   min-height: 100vh;
   padding-top: 15vh;
 }
+
 // ****************menu
 #menu {
-  background-color: #150a2e;
+  background-color: #000000;
   width: 100vw;
   height: 15vh;
   position: fixed;
   top: 0;
   z-index: 10;
 }
+
 .list {
-  
+
   text-align: center;
   text-justify: center;
-    &__item {
+
+  &__item {
     position: relative;
     display: inline-block;
     font-size: 22px;
     text-transform: uppercase;
     margin: 20px;
     padding: 5px;
-    border: 2px solid blue;
+    border: 2px solid rgb(60, 60, 82);
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 4px 1px rgb(16, 16, 77);
-    box-shadow: 0px 0px 4px 1px rgb(10, 10, 71);
+    box-shadow: 0px 0px 4px 1px rgb(117, 117, 126);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-      a {
-      color: blue;
+
+    a {
+      color: rgb(64, 64, 70);
       text-decoration: none;
       display: block;
-      font-family:$big-text;
+      font-family: $big-text;
+    }
   }
-}
-  &__item::before {
-  content: "";
-  background-color: rgb(19, 19, 107);
-  position: absolute;
-  border-top: 1px solid rgb(19, 19, 121);
-  top: 120%;
-  left: 0;
-  width: 100%;
-  height: 100%;
 
-  transform: perspective(2em) rotateX(40deg) scale(1 , 0.35);
-  filter: blur(1.3em);
+  &__item::before {
+    content: "";
+    background-color: rgb(42, 42, 48);
+    position: absolute;
+    border-top: 1px solid rgb(185, 185, 199);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(2em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.3em);
   }
-  &__item:hover::before{
+
+  &__item:hover::before {
     border-top: 1px solid whitesmoke;
     filter: blur(0.7em);
-    box-shadow: 0 2px 0 0 blue;
+    box-shadow: 0 2px 0 0 rgb(228, 228, 241);
   }
 
 
   &__item:hover,
   &__item:focus {
-    background-color: blue;
+    background-color: rgb(47, 47, 51);
     border: 2px solid whitesmoke;
-    -webkit-box-shadow: 2px 1px 20px 5px blue;
-    box-shadow: 2px 1px 20px 5px blue;
+    -webkit-box-shadow: 2px 1px 20px 5px rgb(193, 193, 219);
+    box-shadow: 2px 1px 20px 5px rgb(228, 228, 238);
   }
 
   &__item:hover a {
@@ -118,40 +126,44 @@ section {
 
 // *********************start
 .main {
-  background-image: url(/img/zespół.jpg);
+  background-image: url(/img/logoczarne.png);
   background-size: cover;
   color: whitesmoke;
-  
-  .text{
+
+  .text {
     margin: auto;
+    margin-top: 55vh;
     padding: 0 20px;
     width: 80%;
-    // background: rgba( 231, 24, 181, 0.15 );
-    background: url("../img/kółka.jpg");
+    background: rgba(92, 86, 90, 0.15);
+
     background-size: cover;
     opacity: 0.8;
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 5px );
-border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(139, 140, 148, 0.37);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
 
   }
+
   &__titel {
-  width: 20vw;
-  margin-top: 40vh;
-  padding: 5px;
-  
-}
-&__undertitel {
-  width: 20vw;
-  margin: auto;
-  padding: 5px;
- 
-}
-&__text {
-  padding: 5px;
-  margin: auto;
- 
-}
+    width: 20vw;
+    margin-top: 40vh;
+    padding: 5px;
+
+  }
+
+  &__undertitel {
+    width: 20vw;
+    margin: auto;
+    padding: 5px;
+
+  }
+
+  &__text {
+    padding: 5px;
+    margin: auto;
+
+  }
 
 }
 
@@ -160,13 +172,13 @@ border-radius: 20px;
 // **********************about
 .about {
   width: 100vw;
-  color: #c2c5c7;
+  color: #292c2e;
   text-align: center;
   justify-items: center;
   align-items: center;
- 
-  
-  &__team{
+
+
+  &__team {
     width: 80vw;
     height: 400px;
     margin: auto;
@@ -176,164 +188,189 @@ border-radius: 20px;
     gap: 2px;
 
   }
-  &__person{
-    
+
+  &__person {
+
     height: 100%;
-    background-size:cover ;
-    background-position:center ;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
+    filter: grayscale(1);
     transition: all 0.3s ease-out;
-    &:hover{
-      transform: scale(1.2);
-      z-index:100;
+
+    &:hover {
+      filter: none;
+      z-index: 3;
     }
 
-    &:hover p, &:hover h3 {
+    &:hover p,
+    &:hover h3 {
       width: 100%;
     }
-    p{
+
+    p {
       text-transform: uppercase;
       margin-top: 350px;
-      
+
+
     }
-    p, h3{
+
+    p,
+    h3 {
       display: flex;
       width: 0px;
       align-items: center;
       margin-left: auto;
       margin-right: auto;
       padding: 0;
-      color: white;
+      color: rgb(0, 0, 0);
       overflow: hidden;
       font-family: $hand-text;
-      font-size: 30px;
-      background: url("../img/bg_bggenerator_com\ \(1\).jpg");
+      font-size: 20px;
+      background: white;
+      opacity: 0.5;
+      backdrop-filter: blur(9.5px);
       background-size: cover;
       transition: all 0.3s ease-in-out;
     }
 
   }
-  &__person:nth-child(1){
-    background: url("../img/bassista.jpg");
-    background-size:cover ;
-    background-position:center ;
-    background-repeat: no-repeat;
-  }
-  &__person:nth-child(2){
-    background: url("../img/klawiszowiec.jpg");
-    background-size:cover ;
-    background-position:center ;
-    background-repeat: no-repeat;
-  }
-  &__person:nth-child(3){
-    background: url("../img/wokalistka.jpg");
-    background-size:cover ;
-    background-position-x:-450px ;
-    background-repeat: no-repeat;
-  }
-  &__person:nth-child(4){
-    background: url("../img/perkusista.jpg");
-    background-size:cover ;
-    background-position:left ;
-    background-repeat: no-repeat;
-  }
-  &__person:nth-child(5){
-    background: url("../img/gitarzysta.jpg");
-    background-size:cover ;
-    background-position:center ;
-    background-repeat: no-repeat;
-  }
-  
 
+  &__person:nth-child(1) {
+    background: url("../img/bassista.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
+
+  &__person:nth-child(2) {
+    background: url("../img/klawiszowiec.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__person:nth-child(3) {
+    background: url("../img/wokalistka.jpg");
+    background-size: cover;
+    background-position-x: -450px;
+    background-repeat: no-repeat;
+  }
+
+  &__person:nth-child(4) {
+    background: url("../img/perkusista.jpg");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+
+  &__person:nth-child(5) {
+    background: url("../img/gitarzysta.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+}
 
 //********************* gallery
-.gallery{
-  // background: url("../img/kółka.jpg");
+.gallery {
+  background: url("../img/logo\ białe.png");
   background-size: cover;
-  color: rgb(244, 255, 86);
-  h2{
+  color: rgb(33, 33, 36);
+
+  h2 {
     width: 100%;
     text-align: center;
     margin: auto;
   }
 }
+
 //********************** demo video
 .demo {
-  // background: url("../img/kółka\ i\ tr.jpg");
+  background: rgb(66, 65, 65);
   background-size: cover;
   display: block;
   align-items: center;
   color: aliceblue;
-  h2{
+
+  h2 {
     width: 100%;
     text-align: center;
     margin: auto;
     padding: 0px 20px;
   }
-  .music_list{
+
+  .music_list {
     display: grid;
     grid-column: 1fr;
     width: 50vw;
     align-items: center;
     margin: auto;
   }
+
   .music_item {
     display: block;
     width: 100%;
     padding: 10px;
-}
+  }
 
-.music_item p {
+  .music_item p {
     // background: rgba(0, 0, 0, .5);
     width: 100%;
     text-align: center;
     color: #FFF;
     padding: 10px;
     border-radius: 5px 5px 0 0;
-    
-}
+
+  }
 
 
 
 
-.music_item audio {
+  .music_item audio {
     width: 100%;
     // background: rgba(0, 0, 0, .5);
     color: #FFF;
-}
+  }
 
 }
-  
+
 
 //****************** contact
 
-.contact{
-  background: url(https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+.contact {
+
+  background: url("../img/logoczarne.png");
   background-size: cover;
-  color: #c2c5c7;
+  color: #eff1f3;
   display: flex;
   margin: 0;
   padding: 0;
 
 
-  &__text{
-    width: 50vw;
-    height: 100%;
-    margin-top: 50vh;
-    padding-top: 20vh;
-    padding: 50px;
+  &__text {
+
+    width: 40vw;
+    height: 20%;
+    border-radius: 40px;
+    margin-top: 65vh;
+    margin-left: 150px;
+    padding-top: 10vh;
+    padding: 20px;
     display: inline-block;
-    background: rgba( 95, 11, 86, 0.35 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 9.5px );
+    background: rgba(102, 98, 102, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(203, 204, 221, 0.37);
+    backdrop-filter: blur(9.5px);
 
 
   }
- 
+
 }
-footer{
+
+footer {
   height: 10vh;
   background: #000;
   text-align: center;
@@ -341,97 +378,127 @@ footer{
   color: white;
   padding: 20px;
 }
+
 @media (max-width:420px) {
 
-  h1{
+  h1 {
     font-size: 30px;
   }
-  #menu{
+
+  #menu {
     height: 10vh;
-   
+
   }
-  .list__item{
-    margin:15px 5px;
+
+  .list__item {
+
+    margin: 15px 5px;
     padding: 2px;
     font-size: 15px;
-   }
-   .main{
-     .text{
-       width: 100%;
-     }
-   }
-   .about{
-     &__team{
-    width: 90vw;
-    height: 80vh;
-    display: flexbox;
-    position: relative;
-   }
-    &__person{
-     display:flex;
-     height: 40vh;
-     width: 45vw;
-     position: relative;
-     margin: 0;
-     padding: 0;
-     gap: 0;
-     &:hover p{
+  }
+
+  .main {
+    background-position-x: -300px;
+
+    .text {
+      width: 100%;
+    }
+  }
+
+  .about {
+    &__team {
+      width: 90vw;
+      height: 80vh;
+      display: flexbox;
+      position: relative;
+    }
+
+    &__person {
+      display: flex;
+      height: 20vh;
+      width: 45vw;
+      border-radius: 50%;
+      position: relative;
       margin: 0;
       padding: 0;
-      padding-left: 10px;
-      width: 100vw;
-      height: 20%;
-      margin-top: 80%;
-      font-size: 10px;
+      gap: 0;
 
-     }
-     &:hover h3{
-       width: 100vw;
-       height: 20%;
 
-       margin-top: 100%;
-     }
-      
+      &:hover p {
+        margin: 0;
+        padding: 0;
+        padding-left: 10px;
+        width: 100vw;
+        height: 15%;
+        margin-top: 60%;
+        font-size: 12px;
+        opacity: 1;
+
+      }
+
+      &:hover h3 {
+        width: 100vw;
+        height: 15%;
+        opacity: 1;
+        margin-top: 80%;
+      }
+
     }
-    &__person:nth-child(1){
+
+    &__person:nth-child(1) {
       top: 0;
       left: 0;
     }
-    &__person:nth-child(2){
+
+    &__person:nth-child(2) {
       top: 0;
       right: 0;
     }
-    &__person:nth-child(3){
+
+    &__person:nth-child(3) {
       top: 25%;
       left: -150%;
-      background-position-x:-300px ;
-      z-index: 3;
-      
+      background-position-x: -134px;
+
     }
-    &__person:nth-child(4){
-     
-      top:50%;
+
+    &__person:nth-child(4) {
+
+      top: 50%;
       left: -303%;
     }
-    &__person:nth-child(5){
+
+    &__person:nth-child(5) {
       top: 50%;
       left: -303%;
     }
   }
-  .demo{
-    .music_list{
-    width: 80vw;
+
+  .demo {
+    .music_list {
+      width: 80vw;
+    }
   }
+
+  .gallery {
+    background-position-x: -200px;
   }
-  .contact{
-    &__text{
-      width: 100vw;
+
+  .contact {
+    background-position-x: -300px;
+
+    &__text {
+      margin-top: 25%;
+      margin-left: 10px;
+      background-position: right;
+      width: 90vw;
       padding: 10px;
       min-height: 40vh;
-      p{
+
+      p {
         margin-top: 25px;
       }
     }
   }
-  
+
 }

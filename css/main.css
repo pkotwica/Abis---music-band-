@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,22 +10,20 @@
 }
 
 body {
-  background: url("../img/bg_bggenerator_com (1).jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #e9e5e5;
 }
 
 h1 {
   margin: auto;
   display: block;
-  font-family: "Nerko One", cursive;
+  font-family: "Play", sans-serif;
   font-size: 60px;
   text-transform: uppercase;
   letter-spacing: 10px;
 }
 
 h2 {
-  font-family: "Nerko One", cursive;
+  font-family: "Play", sans-serif;
   letter-spacing: 5px;
   font-size: 20px;
   padding-left: 50px;
@@ -34,7 +32,7 @@ h2 {
 
 p {
   letter-spacing: 2px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ibarra Real Nova", serif;
   padding-left: 50px;
 }
 
@@ -44,7 +42,7 @@ section {
 }
 
 #menu {
-  background-color: #150a2e;
+  background-color: #000000;
   width: 100vw;
   height: 15vh;
   position: fixed;
@@ -64,26 +62,26 @@ section {
   text-transform: uppercase;
   margin: 20px;
   padding: 5px;
-  border: 2px solid blue;
+  border: 2px solid #3c3c52;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 4px 1px #10104d;
-  box-shadow: 0px 0px 4px 1px #0a0a47;
+  box-shadow: 0px 0px 4px 1px #75757e;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .list__item a {
-  color: blue;
+  color: #404046;
   text-decoration: none;
   display: block;
-  font-family: "Nerko One", cursive;
+  font-family: "Play", sans-serif;
 }
 
 .list__item::before {
   content: "";
-  background-color: #13136b;
+  background-color: #2a2a30;
   position: absolute;
-  border-top: 1px solid #131379;
+  border-top: 1px solid #b9b9c7;
   top: 120%;
   left: 0;
   width: 100%;
@@ -98,15 +96,15 @@ section {
   border-top: 1px solid whitesmoke;
   -webkit-filter: blur(0.7em);
           filter: blur(0.7em);
-  -webkit-box-shadow: 0 2px 0 0 blue;
-          box-shadow: 0 2px 0 0 blue;
+  -webkit-box-shadow: 0 2px 0 0 #e4e4f1;
+          box-shadow: 0 2px 0 0 #e4e4f1;
 }
 
 .list__item:hover, .list__item:focus {
-  background-color: blue;
+  background-color: #2f2f33;
   border: 2px solid whitesmoke;
-  -webkit-box-shadow: 2px 1px 20px 5px blue;
-  box-shadow: 2px 1px 20px 5px blue;
+  -webkit-box-shadow: 2px 1px 20px 5px #c1c1db;
+  box-shadow: 2px 1px 20px 5px #e4e4ee;
 }
 
 .list__item:hover a {
@@ -114,22 +112,23 @@ section {
 }
 
 .main {
-  background-image: url(/img/zespół.jpg);
+  background-image: url(/img/logoczarne.png);
   background-size: cover;
   color: whitesmoke;
 }
 
 .main .text {
   margin: auto;
+  margin-top: 55vh;
   padding: 0 20px;
   width: 80%;
-  background: url("../img/kółka.jpg");
+  background: rgba(92, 86, 90, 0.15);
   background-size: cover;
   opacity: 0.8;
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(139, 140, 148, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(139, 140, 148, 0.37);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-radius: 20px;
 }
 
@@ -152,7 +151,7 @@ section {
 
 .about {
   width: 100vw;
-  color: #c2c5c7;
+  color: #292c2e;
   text-align: center;
   justify-items: center;
   -webkit-box-align: center;
@@ -177,17 +176,20 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
 .about__person:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  z-index: 100;
+  -webkit-filter: none;
+          filter: none;
+  z-index: 3;
 }
 
-.about__person:hover p, .about__person:hover h3 {
+.about__person:hover p,
+.about__person:hover h3 {
   width: 100%;
 }
 
@@ -196,7 +198,8 @@ section {
   margin-top: 350px;
 }
 
-.about__person p, .about__person h3 {
+.about__person p,
+.about__person h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,11 +210,14 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  color: white;
+  color: black;
   overflow: hidden;
-  font-family: "Caveat", cursive;
-  font-size: 30px;
-  background: url("../img/bg_bggenerator_com (1).jpg");
+  font-family: "Cinzel", serif;
+  font-size: 20px;
+  background: white;
+  opacity: 0.5;
+  -webkit-backdrop-filter: blur(9.5px);
+          backdrop-filter: blur(9.5px);
   background-size: cover;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -253,8 +259,9 @@ section {
 }
 
 .gallery {
+  background: url("../img/logo białe.png");
   background-size: cover;
-  color: #f4ff56;
+  color: #212124;
 }
 
 .gallery h2 {
@@ -264,6 +271,7 @@ section {
 }
 
 .demo {
+  background: #424141;
   background-size: cover;
   display: block;
   -webkit-box-align: center;
@@ -311,9 +319,9 @@ section {
 }
 
 .contact {
-  background: url(https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background: url("../img/logoczarne.png");
   background-size: cover;
-  color: #c2c5c7;
+  color: #eff1f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,15 +330,17 @@ section {
 }
 
 .contact__text {
-  width: 50vw;
-  height: 100%;
-  margin-top: 50vh;
-  padding-top: 20vh;
-  padding: 50px;
+  width: 40vw;
+  height: 20%;
+  border-radius: 40px;
+  margin-top: 65vh;
+  margin-left: 150px;
+  padding-top: 10vh;
+  padding: 20px;
   display: inline-block;
-  background: rgba(95, 11, 86, 0.35);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(102, 98, 102, 0.35);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(203, 204, 221, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(203, 204, 221, 0.37);
   -webkit-backdrop-filter: blur(9.5px);
           backdrop-filter: blur(9.5px);
 }
@@ -356,6 +366,9 @@ footer {
     padding: 2px;
     font-size: 15px;
   }
+  .main {
+    background-position-x: -300px;
+  }
   .main .text {
     width: 100%;
   }
@@ -369,8 +382,9 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 40vh;
+    height: 20vh;
     width: 45vw;
+    border-radius: 50%;
     position: relative;
     margin: 0;
     padding: 0;
@@ -381,14 +395,16 @@ footer {
     padding: 0;
     padding-left: 10px;
     width: 100vw;
-    height: 20%;
-    margin-top: 80%;
-    font-size: 10px;
+    height: 15%;
+    margin-top: 60%;
+    font-size: 12px;
+    opacity: 1;
   }
   .about__person:hover h3 {
     width: 100vw;
-    height: 20%;
-    margin-top: 100%;
+    height: 15%;
+    opacity: 1;
+    margin-top: 80%;
   }
   .about__person:nth-child(1) {
     top: 0;
@@ -401,8 +417,7 @@ footer {
   .about__person:nth-child(3) {
     top: 25%;
     left: -150%;
-    background-position-x: -300px;
-    z-index: 3;
+    background-position-x: -134px;
   }
   .about__person:nth-child(4) {
     top: 50%;
@@ -415,8 +430,17 @@ footer {
   .demo .music_list {
     width: 80vw;
   }
+  .gallery {
+    background-position-x: -200px;
+  }
+  .contact {
+    background-position-x: -300px;
+  }
   .contact__text {
-    width: 100vw;
+    margin-top: 25%;
+    margin-left: 10px;
+    background-position: right;
+    width: 90vw;
     padding: 10px;
     min-height: 40vh;
   }
